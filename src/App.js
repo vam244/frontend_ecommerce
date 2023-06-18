@@ -12,6 +12,8 @@ import Register from "./components/user_login_reg/Register"
 function App() {
   const [currentForm, setCurrentForm] = useState('login');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [search_product, setsearch_product] = useState("");
+
 
   const toggleForm = (formName) => {
     setCurrentForm(formName);
@@ -47,7 +49,7 @@ useEffect(()=>{
   return (
     <>
       <Router>
-        <Header />
+        <Header setsearch_product={setsearch_product}/>
         <Switch>
           <Route path='/login' exact>
           {
@@ -56,7 +58,7 @@ useEffect(()=>{
           </Route>
           <Route path='/' exact>
             {/* ignore productitems  */}
-            <Shop/>
+            <Shop search_product={search_product}/>
           </Route>
           <Route path='/cart' exact>
           {/* {

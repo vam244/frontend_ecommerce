@@ -2,7 +2,7 @@ import React from "react"
 import logo from "./logo_v.png"
 import { Link } from "react-router-dom"
 
-const Search = ({ CartItem }) => {
+const Search = ({setsearch_product }) => {
   // fixed Header
   window.addEventListener("scroll", function () {
     const search = document.querySelector(".search")
@@ -17,10 +17,10 @@ const Search = ({ CartItem }) => {
             <img src={logo} style={{width:50}} alt='' />
           </div>
 
-          <div className='search-box f_flex'>
-            {/* <input type='text' placeholder='Search and hit enter...' /> */}
-            {/* <i className='fa fa-search' style={{marginRight:20}}></i> */}
-            {/* <i className='fa fa-lens'></i> */}
+          <div className='search-box f_flex'style={{width:200,marginRight:60}}>
+            <input  type='text' placeholder='Search and hit enter...'onChange={(e) => setsearch_product(e.target.value)} /> 
+             {/* <i className='fa fa-lens'></i> */}
+            {/* <i className='fa fa-search' ></i> */}
           </div>
 
           <div className='icon f_flex width'>

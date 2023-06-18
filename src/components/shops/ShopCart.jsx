@@ -48,7 +48,7 @@ import React, { useState } from "react"
 import { useEffect } from "react"
 import Shopitemlist from './shopitemlist'
 
-const ShopCart = () => {
+const ShopCart = ({search_product}) => {
   const [products,setproducts]=useState([])
   // const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
  
@@ -90,11 +90,15 @@ const ShopCart = () => {
   
   return (
    
-    <>
+    <> 
       {products.map((product) => {
-        return (
+        if ((search_product === product.name.slice(0, search_product.length))&&search_product.length!==""){ return (
         <Shopitemlist key={product.id} setproducts={setproducts} updateproduct={updateproduct} shopItems={product}/>
-        )
+        )}
+else if(search_product.length!==""){
+  <Shopitemlist key={product.id} setproducts={setproducts} updateproduct={updateproduct} shopItems={product}/>
+}
+
       })}
     </>
   )
