@@ -18,7 +18,7 @@ const Search = ({setsearch_product }) => {
           </div>
 
           <div className='search-box f_flex'style={{width:"50%",marginRight:60}}>
-            {/* <input  type='text' placeholder='Search and hit enter...'onChange={(e) => setsearch_product(e.target.value)} />  */}
+            <input  type='text' placeholder='Search and hit enter...'onChange={(e) => setsearch_product(e.target.value)} /> 
              {/* <i className='fa fa-lens'></i> */}
             {/* <i className='fa fa-search' ></i> */}
           </div>
