@@ -23,7 +23,7 @@ function Shopitemlist({shopItems,count,increment,updateproduct,setproducts}) {
   // };
 // onChange={(e) => { handleChange(e.target.value) }} 
 let addToCart=async(product)=>{
-await fetch('http://127.0.0.1:8000/cart/create',{
+await fetch('https://bvamsi.pythonanywhere.com/cart/create',{
   method:'POST',
   headers: {
     'Content-Type': 'application/json'
