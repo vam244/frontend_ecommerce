@@ -7,7 +7,7 @@ const  Login = (props) => {
    const removeitem=()=>{
     localStorage.removeItem('token')
     history.push('/')
-    // window.location.reload();git 
+    window.location.reload();
 
    }
    const history = useHistory();
@@ -33,7 +33,7 @@ const  Login = (props) => {
         }
         // console.log(t.token)
         history.push('/cart');
-        window.location.reload();
+        // window.location.reload();
           // console.log(JSON.parse(localStorage.getItem('Data_user')))
     }
     // window.onload = function() {
