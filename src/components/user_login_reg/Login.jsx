@@ -13,7 +13,7 @@ const  Login = (props) => {
    const history = useHistory();
     const handleSubmit = async()=>{
        
-       let response= await fetch('http://127.0.0.1:8000/login/',{
+       let response= await fetch('https://bvamsi.pythonanywhere.com/login/',{
             method:'POST',
             headers: {
                 'Content-Type': 'application/json',

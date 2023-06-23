@@ -5,7 +5,7 @@ const Cart = () => {
   // Stpe: 7   calucate total of items
   const [CartItem, setCartItem] = useState([])
   let getcart=async()=>{
-    let response=await fetch('http://127.0.0.1:8000/cart/',{
+    let response=await fetch('https://bvamsi.pythonanywhere.com/cart/',{
       method:'GET'
     })
     let data= await response.json()
@@ -19,7 +19,7 @@ const Cart = () => {
   }
  let updatecart=async(product)=>{
   console.log('Handle Change cart:', CartItem)
-  await fetch(`http://127.0.0.1:8000/cart/${product.id}/update`,{
+  await fetch(`https://bvamsi.pythonanywhere.com/cart/${product.id}/update`,{
     method:'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ const Cart = () => {
  }
     
 let deleteitem=async(product)=>{
-  await fetch(`http://127.0.0.1:8000/cart/${product.id}/delete`,{
+  await fetch(`https://bvamsi.pythonanywhere.com/cart/${product.id}/delete`,{
     method:'DELETE',
     headers:{
       'Content-Type': 'application/json',
