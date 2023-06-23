@@ -7,7 +7,7 @@ const  Login = (props) => {
    const removeitem=()=>{
     localStorage.removeItem('token')
     history.push('/')
-    window.location.reload();
+    // window.location.reload();git 
 
    }
    const history = useHistory();
