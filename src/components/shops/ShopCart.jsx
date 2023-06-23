@@ -54,7 +54,7 @@ const ShopCart = ({search_product}) => {
  
   
   let getproduct=async()=>{
-    let response= await fetch('http://127.0.0.1:8000/products/',{
+    let response= await fetch('https://bvamsi.pythonanywhere.com/products/',{
       method:'GET'
     })
     let response_info=await response.json()
