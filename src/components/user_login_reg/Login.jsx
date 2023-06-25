@@ -27,13 +27,13 @@ const  Login = (props) => {
         setusername('')
         setPass('')
         if (response.ok) {
-          // props.setIsLoggedIn(true); // Set the login state to true if the response is successful
+      
           let t=await response.json()
           localStorage.setItem('token',t.token)
         }
         // console.log(t.token)
-        history.push('/cart');
-        // window.location.reload();
+        history.push('/');
+        window.location.reload();
           // console.log(JSON.parse(localStorage.getItem('Data_user')))
     }
     // window.onload = function() {

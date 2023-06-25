@@ -42,11 +42,11 @@ const Footer = () => {
             </ul>
           </div> */}
           <div className='box'>
-            <h2>Contact Us</h2>
+            <h2>hope you like this project!</h2>
             <ul>
-              <li>70 Washington Square South, New York, NY 10012, United States </li>
-              <li>Email: uilib.help@gmail.com</li>
-              <li>Phone: +1 1123 456 780</li>
+              <li><b>vist my portfolio website by cliclking the link below</b> </li>
+              <li><a style={{color:"blue" ,backgroundColor:"white"}} href="https://vamsi-portfolio.onrender.com">PORTFOLIO</a></li>
+              <li>Phone:9490387526</li>
             </ul>
           </div>
         </div>
