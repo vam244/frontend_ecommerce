@@ -129,7 +129,7 @@ let deleteitem=async(product)=>{
   return (
     <>
       <section className='cart-items'>
-        <div className='container d_flex'>
+        {/* <div className='container d_flex'> */}
           {/* if hamro cart ma kunai pani item xaina bhane no diplay */}
 
           <div className='cart-details'>
@@ -138,7 +138,6 @@ let deleteitem=async(product)=>{
             {/* yasma hami le cart item lai display garaaxa */}
             {CartItem.map((item) => {
               const productQty = item.price * item.qty
-
               return (
                 <div className='cart-list product d_flex' key={item.id}>
                   <div className='img'>
@@ -148,7 +147,7 @@ let deleteitem=async(product)=>{
                     <h3>{item.name}</h3>
                     <h4>
                       ${item.price}.00 * {item.qty}
-                      <span>${productQty}.00</span>
+                      <span>Rs{productQty}.00</span>
                     </h4>
                   </div>
                   <div className='cart-items-function'>
@@ -180,7 +179,7 @@ let deleteitem=async(product)=>{
             })}
           </div>
 
-          <div className='cart-total product'>
+          <div className='cart-total'>
             <h2>Cart Summary</h2>
             <div className=' d_flex'>
               <h4>Total Price :</h4>
@@ -188,7 +187,7 @@ let deleteitem=async(product)=>{
             </div>
             <button style={{marginTop:50,color:'red',fontSize:20}} onClick={update_all_products}>save cart</button>
           </div>
-        </div>
+        {/* </div> */}
       </section>
     </>
   )
