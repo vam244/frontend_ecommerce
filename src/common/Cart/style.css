@@ -178,6 +178,14 @@
     font-size: 15px;
     font-weight: 400;
   }
+  .cart-total{
+    width: 100%;
+    margin-bottom: 30px;;
+  }
+  .cart-total h4{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
   .cart-total h3 {
     font-size: 20px;
     font-weight: 500;

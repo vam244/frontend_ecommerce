@@ -14,7 +14,6 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [search_product, setsearch_product] = useState("");
 
-
   const toggleForm = (formName) => {
     setCurrentForm(formName);
   }
@@ -66,7 +65,7 @@ useEffect(()=>{
             <Cart/>}
             else{ <div style={{margin:30 }}> please login to view the cart</div>
           }} */}
-            {isLoggedIn&&<Cart/>||<div style={{margin:30 }}> please login to view the cart</div>}
+            {isLoggedIn&&<Cart />||<div style={{margin:30 }}> please login to view the cart</div>}
           </Route>
         </Switch>
         <Footer />
