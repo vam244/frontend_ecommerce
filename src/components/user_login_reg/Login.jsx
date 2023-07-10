@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from 'react-router-dom';
 
+
 const  Login = (props) => {
     const [username, setusername] = useState('');
     const [pass, setPass] = useState('');
@@ -24,8 +25,8 @@ const  Login = (props) => {
                 password: pass
             })
         })
-        setusername('')
-        setPass('')
+        // setusername('')
+        setPass('*******dffd*')
         if (response.ok) {
       
           let t=await response.json()
@@ -48,16 +49,16 @@ const  Login = (props) => {
     return (
         <div className="auth-form-container" style={{backgroundColor:'lightgoldenrodyellow'}}>
             <div className="login-form" >
-            <h2 style={{marginBottom:50,color:'red'}}><u>Login</u></h2>
+                {!localStorage.getItem('token')&& <h2 style={{marginBottom:50,color:'red'}}><u>Login</u></h2>}
                 <label htmlFor="username">username</label>
                 <input value={username} onChange={(e) => setusername(e.target.value)}  placeholder="xyz" id="name" name="name" />
                 <label htmlFor="password">password</label>
                 <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
                 
             </div>
-                { !localStorage.getItem('token')? <button style={{backgroundColor:"green",color:"black"}} onClick={handleSubmit}>Log In</button> :<button style={{backgroundColor:"red",color:"black"}} onClick={removeitem}>Log out</button>}
+                { !localStorage.getItem('token')? <button style={{backgroundColor:"green",color:"black"}} onClick={handleSubmit}>Log In</button> :<button style={{backgroundColor:"red",color:"black",marginBottom:"50px",marginTop:"10px"}} onClick={removeitem}>Log out</button>}
     
-            <button style={{backgroundColor:"blue",color:"white",marginTop:10}} className="btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button>
+            {  !localStorage.getItem('token')&&<button style={{backgroundColor:"blue",color:"white",marginTop:10,marginBottom:"5px"}} className="btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button>}
         </div>
     )
 }
