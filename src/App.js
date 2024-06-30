@@ -21,7 +21,7 @@ function App() {
 
   const getUserByToken = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/current_user/', {
+      const response = await fetch('https://bvamsi.pythonanywhere.com/current_user/', {
         method: 'GET',
         headers: {
           'Authorization': `Token ${token}`,
