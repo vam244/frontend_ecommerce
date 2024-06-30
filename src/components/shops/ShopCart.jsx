@@ -9,7 +9,7 @@ const ShopCart = ({ search_product }) => {
   const token = localStorage.getItem('token');
 
   const getproduct = async () => {
-    let response = await fetch('http://bvamsi.pythonanywhere.com//products/', {
+    let response = await fetch('https://bvamsi.pythonanywhere.com//products/', {
       method: 'GET'
     });
     let response_info = await response.json();
@@ -17,7 +17,7 @@ const ShopCart = ({ search_product }) => {
   };
 
   let addToCart=async(product)=>{
-    let response= await fetch('http://bvamsi.pythonanywhere.com//cart/create',{
+    let response= await fetch('https://bvamsi.pythonanywhere.com//cart/create',{
       method:'POST',
       headers: {
         'Content-Type': 'application/json',
