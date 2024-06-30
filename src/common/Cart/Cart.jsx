@@ -10,7 +10,7 @@ const Cart = () => {
   useEffect(() => {
     const fetchCartItems = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/cart/', {
+        const response = await fetch('http://bvamsi.pythonanywhere.com//cart/', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ const Cart = () => {
 
   const updateCartItem = async (product) => {
     try {
-      await fetch(`http://127.0.0.1:8000/cart/${product.id}/update`, {
+      await fetch(`http://bvamsi.pythonanywhere.com//cart/${product.id}/update`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ const Cart = () => {
 
   const deleteCartItem = async (product) => {
     try {
-      await fetch(`http://127.0.0.1:8000/cart/${product.id}/delete`, {
+      await fetch(`http://bvamsi.pythonanywhere.com//cart/${product.id}/delete`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

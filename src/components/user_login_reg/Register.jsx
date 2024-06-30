@@ -6,7 +6,7 @@ import React, { useState } from "react";
     const [name, setName] = useState('');
 
     const handleSubmit = async()=>{
-        await fetch('http://127.0.0.1:8000/register/',{
+        await fetch('http://bvamsi.pythonanywhere.com//register/',{
             method:'POST',
             headers: {
                 'Content-Type': 'application/json',
