@@ -1,0 +1,117 @@
+/* General container for the shop item */
+.box {
+    display: flex;
+    justify-content: center;
+    /* height: 50%; */
+    width: 20rem;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+}
+
+.product {
+    width: 100%;
+    /* height: 50%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    width: 80%;
+    height: 0%;
+    position: relative;
+    overflow: hidden;
+} 
+
+ .img img {
+    width: 10%;
+    height: 10%;
+    /* display: block; */
+    object-fit:contain;
+    transition: transform 0.2s;
+} 
+
+.img:hover img {
+    transform: scale(1.05);
+} 
+
+.discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #dc3545;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.product .product-details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+.product .product-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.product .product-details h4 {
+    font-size: 1rem;
+    color: #28a745;
+}
+.product .price {
+    margin-top: 1rem;
+    
+}
+
+
+.product .price button {
+    width: 48%;
+    padding: 0.5rem;
+    margin: 0.5rem 1%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.product .price button:first-of-type {
+    background-color: #ba1f1f;
+    color: #fff;
+    width: 100%;
+}
+
+.product .price button:first-of-type:hover {
+    background-color: #b33c00;
+    width: 100%;
+}
+
+.product .price button:last-of-type {
+    background-color: #6c757d;
+    color: #fff;
+    width: 100%;
+}
+
+.product .price button:last-of-type:hover {
+    background-color: #5a6268;
+    width: 100%;
+}
+
+

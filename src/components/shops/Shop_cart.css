@@ -1,0 +1,12 @@
+.mainarea{
+    display: flex; 
+    flex-direction: row; 
+    /* flex-wrap: wrap */
+} 
+@media (max-width: 768px) {
+    .mainarea{
+        display: flex; 
+        flex-direction: column; 
+        /* flex-wrap: wrap */
+    } 
+}
