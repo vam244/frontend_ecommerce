@@ -93,6 +93,7 @@
     border-radius: 2rem;
     background-color: rgb(228, 29, 29);
     color: white;
+    width: 50%;
 }
 
 .back-button-container {
@@ -104,8 +105,9 @@
     margin-right: 2rem;
 }
 
-.back-button i {
-    font-size: 1.2rem;
+.back-button-container  .back-button button{
+    font-size: 1rem;
+    width: 5rem;
 }
 
 @media (max-width: 1024px) {

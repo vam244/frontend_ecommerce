@@ -1,0 +1,33 @@
+.auth-form-container {
+    background-color: lightgoldenrodyellow;
+  }
+  
+  .login-form h2 {
+    align-self: center;
+    margin-bottom: 50px;
+    color: red;
+    text-decoration: underline;
+  }
+  
+  button.login-btn {
+    width: 100%;
+    background-color: green;
+    color: black;
+  }
+  
+  button.logout-btn {
+    background-color: red;
+    color: black;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  button.register-btn {
+    width: 100%;
+    background-color: blue;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  

@@ -10,7 +10,7 @@
     border: 1px solid #e1e1e1;
     border-radius: 5px;
     margin-bottom: 1rem;
-    margin-right: 0rem;
+    margin-right: 2rem;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
@@ -115,3 +115,8 @@
 }
 
 
+@media (max-width: 1024px) {
+    .box{
+        margin-right: 0px;
+    }
+}
