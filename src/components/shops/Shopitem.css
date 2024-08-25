@@ -36,7 +36,7 @@
 } 
 
  .img img {
-    width: 10%;
+    width: 90%;
     height: 10%;
     /* display: block; */
     object-fit:contain;

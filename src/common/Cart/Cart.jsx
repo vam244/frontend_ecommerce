@@ -97,7 +97,7 @@ const Cart = () => {
 
   const totalPrice = cartItems.reduce((total, item) => total + item.qty * item.price, 0);
 
-  const updateAllProducts = () => {
+  const updateAllProducts = async () => {
     cartItems.forEach(product => updateCartItem(product));
     window.location.reload();
   };

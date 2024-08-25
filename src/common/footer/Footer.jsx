@@ -6,12 +6,19 @@ const Footer = () => {
     <>
       <footer>
           <div className='mainbox'>
-            <h2>Hope you like this Project!</h2>
             <ul>
-              <li><b>vist my portfolio website by cliclking the link below</b> </li>
+              <li><b>Vist my Portfolio website by cliclking the link below</b> </li>
               <li><a  href="https://vamsi-portfolio.onrender.com">PORTFOLIO</a></li>
               <li>Phone:9490387526</li>
             </ul>
+          <hr></hr>
+   <div className='sb_footer-below'>
+    <div className='sb_footer-copyright'>
+        <p> 
+        @{new Date().getFullYear()} VamsiCreations. All right reserved.        
+        </p>
+    </div>
+   </div>
           </div>
         
       </footer>

@@ -37,11 +37,13 @@ const Login = (props) => {
   };
 
   return (
+    <>
+    <div className="back">
     <div className="auth-form-container">
       <div className="login-form">
         {!localStorage.getItem('token') && <h2>Login</h2>}
         {!localStorage.getItem('token') ? (
-          <>
+          <div className="login_page">
             <label htmlFor="username">username</label>
             <input
               value={username}
@@ -50,7 +52,7 @@ const Login = (props) => {
               id="name"
               name="name"
             />
-          </>
+          </div>
         ) : (
           <>
             <label htmlFor="username">username</label>
@@ -91,6 +93,8 @@ const Login = (props) => {
         </button>
       )}
     </div>
+    </div>
+    </>
   );
 };
 

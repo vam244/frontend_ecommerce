@@ -1,16 +1,18 @@
 footer {
   background-color: #0f3460;
-  padding: 100px 0;
   color: #f1eaea;
+  /* position: fixed; */
+  
 }
 footer .mainbox{
   background-color: #0f3460;
+  height: 20vh;
 }
 footer a {
   color: #fcf3f4;
   font-weight: 800;
 }
-  
+
 footer .img {
   background-color: #0c2a4d;
   padding: 15px 20px;
@@ -27,7 +29,7 @@ footer p {
   font-size: 14px;
   font-weight: 300;
   /* opacity: 1; */
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 footer h2 {
   margin-bottom: 20px;
@@ -36,3 +38,9 @@ footer li {
   margin-bottom: 10px;
   /* opacity: 1; */
 }
+@media(max-width:400px){
+  footer{
+    padding-bottom: 20%;
+  }
+}
+/* padding-bottom: ; */

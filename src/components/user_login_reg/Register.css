@@ -2,22 +2,28 @@
     background-color: lightgoldenrodyellow;
   }
   
-  .auth-form-container h2 {
+   h2 {
     align-self: center;
     margin-bottom: 50px;
-    color: red;
+    color: rgb(25, 17, 17);
   }
   
-  button.submit-btn {
+  .submit-btn {
     width: 100%;
-    background-color: green;
+    height: 50%;
+    background: linear-gradient(to left, rgb(67, 67, 177), rgb(244, 158, 158));
     color: black;
+    opacity: 0.8;
+    transition: all 0.5s;
   }
   
   button.link-btn {
+    margin-top: 6%;
     width: 100%;
-    background-color: blue;
-    color: white;
-    margin-top: 10px;
+    height: 50%;
+    background: linear-gradient(to left, rgb(67, 67, 177), rgb(244, 158, 158));
+    color: black;
+    opacity: 0.8;
+    transition: all 0.5s;
   }
   

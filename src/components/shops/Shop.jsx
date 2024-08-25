@@ -5,17 +5,11 @@ import "./style.css"
 const Shop = ({search_product}) => {
   return (
     <>
-      <section className='shop background'>
-        <div className='container d_flex'>
-          {/* <Catg /> */}
-
-          <div className='contentWidth'>
-            <div className='product-content  grid1'>
+      <div className='shop_background'>
+        
               <ShopCart search_product={search_product}/>
-            </div>
-          </div>
-        </div>
-      </section>
+         
+      </div>
     </>
   )
 }

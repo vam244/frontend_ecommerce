@@ -21,6 +21,8 @@ const Register = (props) => {
   };
 
   return (
+    <>
+    <div className="back">
     <div className="auth-form-container">
       <h2><u>Register</u></h2>
       <form className="register-form" onSubmit={handleSubmit}>
@@ -50,7 +52,7 @@ const Register = (props) => {
           id="password"
           name="password"
         />
-        <button type="submit" className="submit-btn">Log In</button>
+        <button type="submit" className="submit-btn">Register</button>
       </form>
       <button
         className="link-btn"
@@ -59,6 +61,8 @@ const Register = (props) => {
         Already have an account? Login here.
       </button>
     </div>
+    </div>
+    </>
   );
 };
 

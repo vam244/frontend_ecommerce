@@ -4,28 +4,22 @@ import { Link } from "react-router-dom";
 import "./Search.css"; // Import the CSS file
 
 const Search = ({ setsearch_product, userData }) => {
-  // fixed Header
-  // window.addEventListener("scroll", function () {
-  //   const search = document.querySelector(".search");
-  //   search.classList.toggle("active", window.scrollY > 100);
-  // });
+
 
   return (
     <>
       <section className="search">
-        <div className="container c_flex">
-          <div className="logo width">
-            <img src={logo} alt="" />
+          <div className="logo">
+            <Link to='/'>
+            <i className="fa  icon-circle">home</i>
+            </Link>
           </div>
-
-          <div className="search-box f_flex">
+        <div className="container ">
             <input
               type="text"
               placeholder="Search and hit enter..."
               onChange={(e) => setsearch_product(e.target.value)}
             />
-          </div>
-           
           <div className="icon f_flex width">
             {!localStorage.getItem("token") ? (
               <Link to="/login">
@@ -33,7 +27,7 @@ const Search = ({ setsearch_product, userData }) => {
               </Link>
             ) : (
               <Link to="/login">
-                <button>{userData.username}</button>
+              <i className="fa  icon-circle">{userData.username}</i>
               </Link>
             )}
             <Link to="/cart">
@@ -42,7 +36,6 @@ const Search = ({ setsearch_product, userData }) => {
           </div>
         </div>
       </section>
-      <Link to='/' >Home</Link>
     </>
   );
 };

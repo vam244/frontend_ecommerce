@@ -52,6 +52,7 @@ const ShopCart = ({ search_product }) => {
         })
       )}
     </div>
+    
   );
 };
 
