@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import Output from './Output';
-import "./style.css"
+import "./Payment_style.css"
 const PaymentGateway = ({totalPrice}) => {
   const [cardNumber, setCardNumber] = useState('');
   const [expiration, setExpiration] = useState('');
@@ -15,8 +16,8 @@ const PaymentGateway = ({totalPrice}) => {
     {paymentResult && <Output/>}
       
       { !paymentResult &&
-    <div style={{display:"flex",justifyContent:"center"}} >
-      <div style={{width:"25rem", textAlign: 'center', marginTop: '20px',marginBottom:"" ,backgroundColor:"lightgrey",borderRadius:"10px"}}>
+    <div style={{display:"flex",justifyContent:"center",padding:"2%"}} >
+      <div style={{width:"25rem", textAlign: 'center', marginTop: '20px',marginBottom:"" ,backgroundColor:"lightgrey",borderRadius:"10px",padding:"5%"}}>
       <h1>Payment </h1>
 <div style={{marginRight:"5%"}}>amount -:{totalPrice}Rs</div>
       <div>
@@ -26,7 +27,7 @@ const PaymentGateway = ({totalPrice}) => {
             type="text"
             value={cardNumber}
             onChange={(e) => setCardNumber(e.target.value)}
-            style={{ marginRight: '13%' }}
+            // style={{ marginRight: '13%' }}
           />
         </label>
       </div>
@@ -38,7 +39,7 @@ const PaymentGateway = ({totalPrice}) => {
             type="text"
             value={expiration}
             onChange={(e) => setExpiration(e.target.value)}
-            style={{ marginRight: '8%',marginLeft:'4%' }}
+            // style={{ marginRight: '8%',marginLeft:'4%' }}
           />
         </label>
       </div>
@@ -50,17 +51,17 @@ const PaymentGateway = ({totalPrice}) => {
             type="text"
             value={cvv}
             onChange={(e) => setCvv(e.target.value)}
-            style={{ marginRight: '5%', marginLeft:"9%" }}
+            // style={{ marginRight: '5%', marginLeft:"9%" }}
           />
         </label>
         </div>
      
-
+      <div style={{display:"flex",gap: '6rem'}}>
       <button
         disabled={ !cardNumber || !expiration || !cvv}
         onClick={handlePayment}
         style={{
-          marginTop: '10px',
+          width:"5rem",
           backgroundColor: '#007bff',
           color: '#fff',
           padding: '8px 16px',
@@ -69,8 +70,23 @@ const PaymentGateway = ({totalPrice}) => {
           cursor: 'pointer',
         }}
       >
-        submit
+        Submit
       </button>
+      <NavLink to="/">
+              
+      <button
+        style={{
+          width:"5rem",
+          backgroundColor: '#007bff',
+          color: '#fff',
+          padding: '8px 16px',
+          border: 'none',
+          borderRadius: '4px',
+          cursor: 'pointer',
+        }}
+      >Cancel</button>      
+      </NavLink>
+      </div>
       </div>
       
     </div>
