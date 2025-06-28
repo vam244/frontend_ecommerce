@@ -7,7 +7,7 @@ const Footer = () => {
       <footer>
           <div className='mainbox'>
             <ul>
-              <li><b>Vist my Portfolio website by cliclking the link below</b> </li>
+              <li><b>Vist my Portfolio website by clicking the link below</b> </li>
               <li><a  href="https://vamsi-portfolio.onrender.com">PORTFOLIO</a></li>
               <li>Phone:9490387526</li>
             </ul>
