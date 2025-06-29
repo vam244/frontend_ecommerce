@@ -38,7 +38,7 @@ const ShopCart = ({ search_product }) => {
         <Product_page  product={curr_product} setCurr_product={setCurr_product} addToCart={addToCart}/>
       ) : (
         products.map((product) => {
-          if (search_product && product.name.slice(0, search_product.length) === search_product) {
+          if (search_product && product.name.slice(0, search_product.length).toLowerCase() === search_product.toLowerCase()) {
             return (
               <Shopitemlist key={product.id} shopItems={product} setCurr_product={setCurr_product} addToCart={addToCart}/>
             );

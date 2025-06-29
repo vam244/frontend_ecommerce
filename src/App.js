@@ -60,7 +60,7 @@ function App() {
   return (
     <>
       <Router>
-        <Header setSearchProduct={setSearchProduct} userData={userData} />
+        <Header setSearch_Product={setSearchProduct} userData={userData} />
         <Switch>
           <Route path='/login' exact>
             {currentForm === "login" ? (
@@ -70,7 +70,7 @@ function App() {
             )}
           </Route>
           <Route path='/' exact>
-            <Shop searchProduct={searchProduct} />
+            <Shop search_product={searchProduct} />
           </Route>
           <Route path='/Product_page'>
             <Product_page />

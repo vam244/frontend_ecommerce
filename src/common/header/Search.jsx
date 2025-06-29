@@ -3,7 +3,7 @@ import logo from "./logo_v.png";
 import { Link } from "react-router-dom";
 import "./Search.css"; // Import the CSS file
 
-const Search = ({ setsearch_product, userData }) => {
+const Search = ({ setSearch_Product, userData }) => {
 
 
   return (
@@ -18,7 +18,7 @@ const Search = ({ setsearch_product, userData }) => {
             <input
               type="text"
               placeholder="Search and hit enter..."
-              onChange={(e) => setsearch_product(e.target.value)}
+              onChange={(e) => setSearch_Product(e.target.value.toLowerCase())}
             />
           <div className="icon f_flex width">
             {!localStorage.getItem("token") ? (
